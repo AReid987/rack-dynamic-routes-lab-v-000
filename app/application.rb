@@ -1,4 +1,5 @@
 class Application
+  @@items = []
 
   def call(env)
     resp = Rack::Response.new
@@ -6,6 +7,7 @@ class Application
     #binding.pry
     if req.path.match(/item/)
       item_name = req.path.split("/items/").last.downcase
+      item = 
     else
       resp.write "Route not found"
       resp.status = 404
