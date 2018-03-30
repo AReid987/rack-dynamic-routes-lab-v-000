@@ -9,7 +9,7 @@ class Application
       item_name = req.path.split("/items/").last
       if !@@items.find{|i| i.name == item_name}.nil?
 
-      #end
+      end
       binding.pry
     else
       resp.write "Route not found"
