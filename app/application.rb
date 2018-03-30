@@ -6,7 +6,7 @@ class Application
 
     if req.path.match(/item/)
       item = req.path.split("items").last 
-    end  
+    end
   end
 
 end
