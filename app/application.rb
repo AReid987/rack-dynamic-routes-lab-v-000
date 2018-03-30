@@ -6,7 +6,7 @@ class Application
     req = Rack::Request.new(env)
     #binding.pry
     if req.path.match(/item/)
-      item_name = req.path.split("/items/").last.downcase
+      item_name = req.path.split("/items/").last
       binding.pry
     else
       resp.write "Route not found"
