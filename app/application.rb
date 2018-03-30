@@ -13,6 +13,7 @@ class Application
       else
         resp.write "Item not found"
         resp.status 400
+        binding.pry 
       end
     else
       resp.write "Route not found"
