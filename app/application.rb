@@ -10,6 +10,9 @@ class Application
       if !@@items.find{|i| i.name == item_name}.nil?
         item = @@items.find{|i| i.name == item_name}.price
         resp.write item.to_s
+      else 
+        resp.write "Item not found"
+        resp.status 400
       end
     else
       resp.write "Route not found"
