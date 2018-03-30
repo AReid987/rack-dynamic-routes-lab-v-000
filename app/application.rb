@@ -8,9 +8,9 @@ class Application
     if req.path.match(/item/)
       item_name = req.path.split("/items/").last
       if !@@items.find{|i| i.name == item_name}.nil?
-        item = @@items.find{|i| i.name == item_name}.price 
+        item = @@items.find{|i| i.name == item_name}.price
       end
-      binding.pry
+      #binding.pry
     else
       resp.write "Route not found"
       resp.status = 404
